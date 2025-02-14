@@ -8,7 +8,7 @@ public class OrderItem : BaseEntity
     private OrderItem()
     {
     }
-    public OrderItem( int productId, decimal unitPrice, int quantity)
+    public OrderItem(int productId, decimal unitPrice, int quantity)
     {
         
         ProductId = productId;

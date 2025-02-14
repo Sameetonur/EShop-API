@@ -48,11 +48,11 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEnt
         return await _dbSet.ToListAsync();
     }
 
-    public async Task<IEnumerable<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>> predicate = null!, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null!,bool showIsDeleted=false ,params Func<IQueryable<TEntity>, IQueryable<TEntity>>[] includes)
+    public async Task<IEnumerable<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>> predicate = null!, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null!, 
+    bool showIsDeleted=false, params Func<IQueryable<TEntity>, IQueryable<TEntity>>[] includes)
     {
         IQueryable<TEntity> query = _dbSet;
-        if(showIsDeleted == true)
-        {
+        if(showIsDeleted){
             query = query.IgnoreQueryFilters();
         }
         if (predicate != null)

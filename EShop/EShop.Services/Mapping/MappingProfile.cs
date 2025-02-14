@@ -1,9 +1,7 @@
 using System;
-using System.Net;
 using AutoMapper;
 using EShop.Entity.Concrete;
 using EShop.Shared.Dtos;
-using Microsoft.EntityFrameworkCore.Design;
 
 namespace EShop.Services.Mapping
 {
@@ -18,35 +16,15 @@ namespace EShop.Services.Mapping
             #endregion
 
             #region Product
-
             CreateMap<Product, ProductDto>()
-                .ForMember(dest => dest.Categories, opt => opt
-                .MapFrom(src => src.ProductCategories
-                .Select(pc => pc.Category))).ReverseMap();
-
+                .ForMember(
+                    dest => dest.Categories,
+                    opt => opt
+                        .MapFrom(src => src.ProductCategories.Select(pc => pc.Category))).ReverseMap();
             CreateMap<Product, ProductCreateDto>().ReverseMap();
             CreateMap<Product, ProductUpdateDto>().ReverseMap();
             #endregion
-            #region Order
-            CreateMap<Order, OrderDto>()
-                .ForMember(dest => dest.ApplicationUser, opt => opt.MapFrom(src => src.ApplicationUser))
-                .ForMember(dest => dest.OrderItems, opt => opt.MapFrom(src => src.OrderItems)).ReverseMap();
-                
-            CreateMap<OrderCreateDto, Order>()
-            .ForMember(dest => dest.OrderItems, opt => opt.MapFrom(src => src.OrderItems));
 
-            #endregion
-
-            #region OrderItem
-            CreateMap<OrderItem, OrderItemDto>()
-                .ForMember(dest => dest.ProductName, opt => opt.MapFrom(src=> src.Product!.Name));
-            CreateMap<OrderItemDto, OrderItem>();
-            CreateMap<OrderItemCreateDto, OrderItem>();
-               
-
-
-            #endregion
-            
             #region Cart
             CreateMap<Cart, CartDto>()
                 .ForMember(dest => dest.ApplicationUser, opt => opt.MapFrom(src => src.ApplicationUser))
@@ -57,20 +35,33 @@ namespace EShop.Services.Mapping
 
             #region CartItem
             CreateMap<CartItem, CartItemDto>()
-                .ForMember(dest => dest.Product, opt => opt.MapFrom(src => src.Product));
+                .ForMember(dest => dest.Product, opt => opt.MapFrom(src => src.Product)).ReverseMap();
             CreateMap<CartItem, CartItemCreateDto>().ReverseMap();
             CreateMap<CartItem, CartItemUpdateDto>().ReverseMap();
             #endregion
 
-            #region ApplicationUserRole
+            #region Order
+            CreateMap<Order, OrderDto>()
+                .ForMember(dest => dest.ApplicationUser, opt => opt.MapFrom(src => src.ApplicationUser))
+                .ForMember(dest => dest.OrderItems, opt => opt.MapFrom(src => src.OrderItems))
+                .ReverseMap();
 
-                CreateMap<ApplicationUser, ApplicationUserDto>().ReverseMap();
-
-
+            CreateMap<OrderCreateDto, Order>()
+                .ForMember(dest => dest.OrderItems, opt => opt.MapFrom(src => src.OrderItems));
 
             #endregion
 
+            #region OrderItem
+            CreateMap<OrderItem, OrderItemDto>()
+               .ForMember(dest => dest.ProductName, opt => opt.MapFrom(src => src.Product!.Name));
+            CreateMap<OrderItemDto, OrderItem>();
 
+            CreateMap<OrderItemCreateDto, OrderItem>();
+            #endregion
+
+            #region ApplicationUserRole
+            CreateMap<ApplicationUser, ApplicationUserDto>().ReverseMap();
+            #endregion
         }
     }
 }

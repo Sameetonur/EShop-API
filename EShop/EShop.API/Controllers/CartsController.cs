@@ -11,13 +11,11 @@ namespace EShop.API.Controllers
     [ApiController]
     public class CartsController : CustomControllerBase
     {
-
         private readonly ICartService _cartService;
 
         public CartsController(ICartService cartService)
         {
             _cartService = cartService;
-
         }
 
         [Authorize]
@@ -30,10 +28,10 @@ namespace EShop.API.Controllers
 
         [Authorize]
         [HttpPost]
-        public async Task<IActionResult> AddToCart([FromBody]CartItemCreateDto cartItemCreateDto)
+        public async Task<IActionResult> AddToCart([FromBody] CartItemCreateDto cartItemCreateDto)
         {
-                 var response = await _cartService.AddToCartAsync(cartItemCreateDto);
-                 return CreateResult(response);
+            var response = await _cartService.AddToCartAsync(cartItemCreateDto);
+            return CreateResult(response);
         }
 
         [Authorize]
@@ -45,8 +43,8 @@ namespace EShop.API.Controllers
         }
 
         [Authorize]
-        [HttpDelete("quantity")]
-        public async Task<IActionResult> ChangeQuantity([FromBody] CartItemUpdateDto  cartItemUpdateDto)
+        [HttpPut("quantity")]
+        public async Task<IActionResult> ChangeQuantity([FromBody] CartItemUpdateDto cartItemUpdateDto)
         {
             var response = await _cartService.ChangeQuantityAsync(cartItemUpdateDto);
             return CreateResult(response);
@@ -59,8 +57,5 @@ namespace EShop.API.Controllers
             var response = await _cartService.ClearCartAsync(GetUserId());
             return CreateResult(response);
         }
-
-
-
     }
 }

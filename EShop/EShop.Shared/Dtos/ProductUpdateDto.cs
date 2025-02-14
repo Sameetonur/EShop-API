@@ -7,7 +7,7 @@ namespace EShop.Shared.Dtos;
 public class ProductUpdateDto
 {
     public int Id { get; set; }
-    
+
     [Required(ErrorMessage = "Ürün adı zorunludur.")]
     [StringLength(100, ErrorMessage = "Ürün adı en fazla 100 karakter olmalıdır.")]
     public string? Name { get; set; }
@@ -19,7 +19,6 @@ public class ProductUpdateDto
     [Required(ErrorMessage = "Ürün fiyatı zorunludur.")]
     [Range(0.01, double.MaxValue, ErrorMessage = "Ürün fiyatı 0'dan büyük olmalıdır.")]
     public decimal? Price { get; set; }
-
     public IFormFile? Image { get; set; }
 
     [Required(ErrorMessage = "Her ürün için en az bir kategori zorunludur.")]

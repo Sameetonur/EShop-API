@@ -220,8 +220,7 @@ public class EShopDbContext : IdentityDbContext<ApplicationUser, ApplicationRole
                     IsDeleted = true
                 }
             );
-            entity.HasQueryFilter(x => !x.IsDeleted); //isdeletedi false olanlarla çalışacak// kategoriler getirildiği zzaman silinmişleri getirmeyecek!
-
+            entity.HasQueryFilter(x => !x.IsDeleted);
         });
 
         builder.Entity<Product>(entity =>

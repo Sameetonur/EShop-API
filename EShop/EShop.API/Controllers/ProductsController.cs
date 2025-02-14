@@ -1,4 +1,3 @@
-using System.Formats.Asn1;
 using EShop.Services.Abstract;
 using EShop.Shared.ControllerBases;
 using EShop.Shared.Dtos;
@@ -12,7 +11,6 @@ namespace EShop.API.Controllers
     [ApiController]
     public class ProductsController : CustomControllerBase
     {
-
         private readonly IProductService _productManager;
 
         public ProductsController(IProductService productManager)
@@ -23,7 +21,7 @@ namespace EShop.API.Controllers
         [HttpPost]
         public async Task<IActionResult> Add(ProductCreateDto productCreateDto)
         {
-            //kategorisiz ürün kaydetme sorunumuz var ilgileneceğiz.
+            //Kategorisiz ürün kaydetme sorunumuz var, ilgileneceğiz.
             var response = await _productManager.AddAsync(productCreateDto);
             return CreateResult(response);
         }
@@ -41,7 +39,6 @@ namespace EShop.API.Controllers
             var response = await _productManager.HardDeleteAsync(id);
             return CreateResult(response);
         }
-
         [HttpDelete("softdelete/{id}")]
         public async Task<IActionResult> SoftDelete(int id)
         {
@@ -56,10 +53,10 @@ namespace EShop.API.Controllers
             return CreateResult(response);
         }
 
-        [HttpGet("get/withcategories{id}")]
+        [HttpGet("get/withcategories/{id}")]
         public async Task<IActionResult> GetByIdWithCategories(int id)
         {
-            var response = await _productManager.GetWitchCategoriesAsync(id);
+            var response = await _productManager.GetWithCategoriesAsync(id);
             return CreateResult(response);
         }
 
@@ -71,7 +68,7 @@ namespace EShop.API.Controllers
         }
 
         [HttpGet("get/all/active")]
-        public async Task<IActionResult> GetAllActive([FromQuery] bool isActive)
+        public async Task<IActionResult> GetAll([FromQuery] bool isActive)
         {
             var response = await _productManager.GetAllAsync(isActive);
             return CreateResult(response);
@@ -87,7 +84,7 @@ namespace EShop.API.Controllers
         [HttpGet("get/all/bycategory")]
         public async Task<IActionResult> GetAllByCategory([FromQuery] int categoryId)
         {
-            var response = await _productManager.GetByCategoriesAsync(categoryId);
+            var response = await _productManager.GetByCategoryAsync(categoryId);
             return CreateResult(response);
         }
 
@@ -119,8 +116,7 @@ namespace EShop.API.Controllers
             return CreateResult(response);
         }
 
-
-        [Authorize(Roles ="Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpGet("get/all/deleted")]
         public async Task<IActionResult> GetAllDeleted()
         {

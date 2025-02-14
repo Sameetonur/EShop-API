@@ -8,6 +8,7 @@ using EShop.Services.Abstract;
 using EShop.Services.Concrete;
 using EShop.Services.Mapping;
 using EShop.Shared.Configurations.Auth;
+using EShop.Shared.Configurations.Email;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -24,7 +25,6 @@ builder.Services.AddDbContext<EShopDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
-
 
 builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
 {
@@ -59,7 +59,7 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
-
+builder.Services.Configure<EmailConfig>(builder.Configuration.GetSection("EmailConfig"));
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
@@ -70,7 +70,7 @@ builder.Services.AddScoped<IProductService, ProductManager>();
 builder.Services.AddScoped<ICartService, CartManager>();
 builder.Services.AddScoped<IOrderService, OrderManager>();
 builder.Services.AddScoped<IImageService, ImageManager>();
-
+builder.Services.AddScoped<IEmailService, EmailManager>();
 
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 
@@ -84,6 +84,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseStaticFiles();
+
 app.UseAuthentication();
 
 app.UseAuthorization();

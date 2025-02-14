@@ -34,12 +34,10 @@ namespace EShop.Services.Concrete
                     return ResponseDto<CategoryDto>.Fail("Bu adda kategori mevcut!", StatusCodes.Status400BadRequest);
                 }
                 var category = _mapper.Map<Category>(categoryCreateDto);
-                // resim yükleme operasyonu için buraya döneceğiz.
-                //RESİM YÜKLEME
+                //Resim Yükleme
                 if (categoryCreateDto.Image == null)
                 {
-                    return ResponseDto<CategoryDto>.Fail("resim boş olmaz", StatusCodes.Status400BadRequest);
-
+                    return ResponseDto<CategoryDto>.Fail("Kategori resmi boş olamaz!", StatusCodes.Status400BadRequest);
                 }
                 var imageResponse = await _imageManager.UploadImageAsync(categoryCreateDto.Image);
                 if (!imageResponse.IsSuccessful)
@@ -77,7 +75,7 @@ namespace EShop.Services.Concrete
 
         }
 
-        public async Task<ResponseDto<int>> CountAsync(bool isActive)
+        public async Task<ResponseDto<int>> CountAsync(bool? isActive)
         {
             try
             {
@@ -160,7 +158,7 @@ namespace EShop.Services.Concrete
                 {
                     return ResponseDto<NoContent>.Fail("Bu kategoriye ait ürünler olduğu için silinemez! Önce ürünleri silmeniz ya da kategorisini değiştirmeniz gerekmektedir!", StatusCodes.Status400BadRequest);
                 }
-                
+
                 _categoryRepository.Delete(category);
                 var result = await _unitOfWork.SaveAsync();
                 if (result < 1)
@@ -226,8 +224,8 @@ namespace EShop.Services.Concrete
                 {
                     return ResponseDto<NoContent>.Fail("Bu adda kategori mevcut!", StatusCodes.Status400BadRequest);
                 }
-                //Resim Operasyonu
-                if (categoryUpdateDto.Image !=null)
+                //Resim operasyonu
+                if (categoryUpdateDto.Image != null)
                 {
                     var imageResponse = await _imageManager.UploadImageAsync(categoryUpdateDto.Image);
                     if (!imageResponse.IsSuccessful)
@@ -236,6 +234,7 @@ namespace EShop.Services.Concrete
                     }
                     _imageManager.DeleteImage(category.ImageUrl);
                     category.ImageUrl = imageResponse.Data ?? "/images/default-category.png";
+
                 }
                 _mapper.Map(categoryUpdateDto, category);
                 _categoryRepository.Update(category);
