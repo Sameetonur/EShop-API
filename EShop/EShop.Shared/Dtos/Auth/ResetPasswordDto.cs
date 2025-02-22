@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace EShop.Shared.Dtos.Auth;
 
-public class    ResetPasswordDto
+public class ResetPasswordDto
 {
     public string? Token { get; set; }
 

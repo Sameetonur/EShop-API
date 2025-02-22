@@ -19,5 +19,7 @@ public interface IProductService
     Task<ResponseDto<int>> CountAsync();
     Task<ResponseDto<int>> CountAsync(bool isActive);
     Task<ResponseDto<bool>> UpdateIsActiveAsync(int id);
+
+    Task<ResponseDto<NoContent>> UpdateIsActiveByCategoryAsync(int categoryId);
     Task<ResponseDto<IEnumerable<ProductDto>>> GetAllDeletedAsync();
 }

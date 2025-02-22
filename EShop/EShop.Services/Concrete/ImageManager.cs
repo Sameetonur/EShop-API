@@ -10,41 +10,28 @@ public class ImageManager : IImageService
     private readonly string _imageFolderPath;
     public ImageManager()
     {
-        //C:\Users\enginniyazi\Documents\GitHub\10-BE-UZMANLIK-YY\03-API\Week07\19-01-2024\EShop\EShop.API\wwwroot\images
+       
         _imageFolderPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images");
         if (!Directory.Exists(_imageFolderPath))
         {
             Directory.CreateDirectory(_imageFolderPath);
         }
     }
-    public ResponseDto<NoContent> DeleteImage(string imageUrl)
+    public void DeleteImage(string imageUrl)
     {
         try
         {
-            if (string.IsNullOrWhiteSpace(imageUrl))
-            {
-                return ResponseDto<NoContent>.Fail("Resim yolu boş olamaz!", StatusCodes.Status400BadRequest);
-            }
-
-            var fileName = Path.GetFileName(imageUrl);//48d2770e-e8c4-4590-b2b0-b88327dcc10b.png
-            var fileFullPath = Path.Combine(_imageFolderPath, fileName);//C:\Users\enginniyazi\Documents\GitHub\10-BE-UZMANLIK-YY\03-API\Week07\19-01-2024\EShop\EShop.API\wwwroot\images\48d2770e-e8c4-4590-b2b0-b88327dcc10b.png
-
-            if (!File.Exists(fileFullPath))
-            {
-                return ResponseDto<NoContent>.Fail("Resim dosyası bulunamadı!", StatusCodes.Status404NotFound);
-            }
-
+            var fileName = imageUrl.Replace("/images/", "");
+            var fileFullPath = Path.Combine(_imageFolderPath, fileName);
             File.Delete(fileFullPath);
-            return ResponseDto<NoContent>.Success(StatusCodes.Status200OK);
-
         }
         catch (Exception ex)
         {
-            return ResponseDto<NoContent>.Fail(ex.Message, StatusCodes.Status500InternalServerError);
+            Console.WriteLine(ex.Message);
         }
     }
 
-    public async Task<ResponseDto<string>> UploadImageAsync(IFormFile image)
+    public async Task<ResponseDto<string>> UploadImageAsync(IFormFile image, string folderName)
     {
         try
         {
@@ -71,12 +58,17 @@ public class ImageManager : IImageService
             }
 
             var fileName = $"{Guid.NewGuid()}{imageExtension}";//48d2770e-e8c4-4590-b2b0-b88327dcc10b.png
-            var fileFullPath = Path.Combine(_imageFolderPath, fileName);//C:\Users\enginniyazi\Documents\GitHub\10-BE-UZMANLIK-YY\03-API\Week07\19-01-2024\EShop\EShop.API\wwwroot\images\48d2770e-e8c4-4590-b2b0-b88327dcc10b.png
+            var folderpath = Path.Combine(_imageFolderPath, folderName);//C:\Users\sametonur\Documents\GitHub\10-BE-UZMANLIK-YY\03-API\Week07\19-01-2024\EShop\EShop.API\wwwroot\images\48d2770e-e8c4-4590-b2b0-b88327dcc10b.png
+            if(!Directory.Exists(folderpath))
+            {
+                Directory.CreateDirectory(folderpath);
+            }
+            var fileFullPath = Path.Combine(folderpath, fileName);//C:\Users\sametonur\Documents\GitHub\10-BE-UZMANLIK-YY\03-API\Week07\19-01-2024\EShop\EShop.API\wwwroot\images\48d2770e-e8c4-4590-b2b0-b88327dcc10b.png
             using (var stream = new FileStream(fileFullPath, FileMode.Create))
             {
                 await image.CopyToAsync(stream);
             }
-            return ResponseDto<string>.Success($"/images/{fileName}", StatusCodes.Status201Created);
+            return ResponseDto<string>.Success($"/images/{folderName}/{fileName}", StatusCodes.Status201Created);
         }
         catch (Exception ex)
         {

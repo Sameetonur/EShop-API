@@ -43,7 +43,7 @@ public class CartManager : ICartService
 
             var cart = await _cartRepository.GetAsync(
                 x => x.Id == cartItemCreateDto.CartId,
-                query => query.Include(c => c.CartItems).ThenInclude(ci => ci.Product)
+                query => query.Include(c => c.CartItems)!.ThenInclude(ci => ci.Product)
             );
             if (cart == null || cart.CartItems == null)
             {
@@ -181,7 +181,7 @@ public class CartManager : ICartService
             }
             var cart = await _cartRepository.GetAsync(
                 x => x.ApplicationUserId == applicationUserId,
-                query => query.Include(x => x.CartItems).ThenInclude(y => y.Product)
+                query => query.Include(x => x.CartItems!).ThenInclude(y => y.Product)
             );
             if (cart == null)
             {

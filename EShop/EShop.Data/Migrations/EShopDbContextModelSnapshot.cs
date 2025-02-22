@@ -158,7 +158,7 @@ namespace EShop.Data.Migrations
                             AccessFailedCount = 0,
                             Address = "Ataşehir",
                             City = "İstanbul",
-                            ConcurrencyStamp = "a97469ac-b9be-4399-83a4-5a5f168c9e54",
+                            ConcurrencyStamp = "d4eeaff7-7fd4-41c3-a86c-03c47d051849",
                             DateOfBirth = new DateTime(1995, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "adminuser@gmail.com",
                             EmailConfirmed = true,
@@ -168,9 +168,9 @@ namespace EShop.Data.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMINUSER@GMAIL.COM",
                             NormalizedUserName = "ADMINUSER@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEAfpU71qxFNW5EINn7XSCNz/MprltKs77GPbx9wXt4puyjK69JEUSP5vhMNRRdm9HQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAED5L266nmh26NO9M3qg9QAIWl/hhadD6HLWsRvvXdfzD+rSsAiyzn+yVziGf4Ovx+g==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "5f1d42b1-fd09-4359-a9c3-35169fae50fe",
+                            SecurityStamp = "ddd9999c-6054-411c-a8fd-3d0f8a709186",
                             TwoFactorEnabled = false,
                             UserName = "adminuser@gmail.com"
                         },
@@ -180,7 +180,7 @@ namespace EShop.Data.Migrations
                             AccessFailedCount = 0,
                             Address = "Kadıköy",
                             City = "İstanbul",
-                            ConcurrencyStamp = "6d999d42-12dc-49e8-a1ca-e6ae414ed3c8",
+                            ConcurrencyStamp = "ae11a807-5f70-49c4-98e2-f24281b2d1d2",
                             DateOfBirth = new DateTime(1995, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "normaluser@gmail.com",
                             EmailConfirmed = true,
@@ -190,9 +190,9 @@ namespace EShop.Data.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "NORMALUSER@GMAIL.COM",
                             NormalizedUserName = "NORMALUSER@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEGhroa2tnpSM5OW7CANzo3toxm4i8aXMVCnpnVkZF9hswRTHuw33Md/x6QLcLY9ZOA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAECUbCzJxjxOq76t9azhk+G2JpRsISmqBbPR+xMAA7cBOZ8X5BN8oJ0yhWviFasCaOg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "4a3a5de4-2dae-42df-802f-eed2a30d1849",
+                            SecurityStamp = "7aa4156f-3164-4528-b6ad-88474b9fe411",
                             TwoFactorEnabled = false,
                             UserName = "normaluser@gmail.com"
                         });
@@ -232,7 +232,7 @@ namespace EShop.Data.Migrations
                         {
                             Id = 1,
                             ApplicationUserId = "d2fe392f-4f60-4963-ba3a-ea52b71fb53e",
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 458, DateTimeKind.Utc).AddTicks(524),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 610, DateTimeKind.Utc).AddTicks(4266),
                             IsActive = true,
                             IsDeleted = false,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -241,7 +241,7 @@ namespace EShop.Data.Migrations
                         {
                             Id = 2,
                             ApplicationUserId = "d4757375-a497-496b-85dc-a510027bd9b1",
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 458, DateTimeKind.Utc).AddTicks(529),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 610, DateTimeKind.Utc).AddTicks(4273),
                             IsActive = true,
                             IsDeleted = false,
                             UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
@@ -327,7 +327,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(786),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(5591),
                             Description = "Bilgisayarlar, telefonlar ve diğer elektronik ürünler.",
                             ImageUrl = "/images/categories/elektronik.jpg",
                             IsActive = true,
@@ -338,7 +338,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 2,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(790),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(5595),
                             Description = "Kadın, erkek ve çocuk giyim ürünleri.",
                             ImageUrl = "/images/categories/moda.jpg",
                             IsActive = true,
@@ -349,7 +349,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 3,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(791),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(5597),
                             Description = "Ev dekorasyonu ve yaşam alanları için ürünler.",
                             ImageUrl = "/images/categories/ev-ve-yasam.jpg",
                             IsActive = true,
@@ -360,7 +360,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 4,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(793),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(5598),
                             Description = "Outdoor ve spor yaparken kullanabileceğiniz ekipmanlar.",
                             ImageUrl = "/images/categories/spor-outdoor.jpg",
                             IsActive = true,
@@ -371,7 +371,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 5,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(794),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(5599),
                             Description = "Araba aksesuarları ve yedek parçalar.",
                             ImageUrl = "/images/categories/otomotiv.jpg",
                             IsActive = false,
@@ -382,7 +382,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 6,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(795),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(5601),
                             Description = "Farklı kategorilerde kitaplar.",
                             ImageUrl = "/images/categories/kitaplar.jpg",
                             IsActive = true,
@@ -393,7 +393,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 7,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(796),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(5602),
                             Description = "Sağlık ve güzellik ürünleri.",
                             ImageUrl = "/images/categories/saglik-kozmetik.jpg",
                             IsActive = true,
@@ -404,7 +404,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 8,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(798),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(5604),
                             Description = "Yiyecek ve içecek ürünleri.",
                             ImageUrl = "/images/categories/gida.jpg",
                             IsActive = true,
@@ -415,7 +415,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 9,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(799),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(5605),
                             Description = "Hobi, oyun ve eğlence ürünleri.",
                             ImageUrl = "/images/categories/hobi-eglence.jpg",
                             IsActive = false,
@@ -426,7 +426,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 10,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(800),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(5606),
                             Description = "Buzdolapları, çamaşır makineleri ve diğer büyük ev aletleri.",
                             ImageUrl = "/images/categories/beyaz-esya.jpg",
                             IsActive = true,
@@ -559,7 +559,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1697),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6405),
                             ImageUrl = "/images/products/laptop.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -571,7 +571,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 2,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1701),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6408),
                             ImageUrl = "/images/products/smartphone.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -583,7 +583,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 3,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1703),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6409),
                             ImageUrl = "/images/products/tshirt.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -595,7 +595,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 4,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1704),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6411),
                             ImageUrl = "/images/products/running_shoes.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -607,7 +607,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 5,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1706),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6412),
                             ImageUrl = "/images/products/refrigerator.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -619,7 +619,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 6,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1707),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6414),
                             ImageUrl = "/images/products/novel_book.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -631,7 +631,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 7,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1709),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6415),
                             ImageUrl = "/images/products/face_cream.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -643,7 +643,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 8,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1710),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6416),
                             ImageUrl = "/images/products/organic_apple.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -655,7 +655,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 9,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1712),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6417),
                             ImageUrl = "/images/products/guitar.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -667,7 +667,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 10,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1713),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6419),
                             ImageUrl = "/images/products/car_tire.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -679,7 +679,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 11,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1715),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6420),
                             ImageUrl = "/images/products/smartwatch.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -691,7 +691,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 12,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1717),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6422),
                             ImageUrl = "/images/products/tablet.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -703,7 +703,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 13,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1718),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6423),
                             ImageUrl = "/images/products/headphones.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -715,7 +715,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 14,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1720),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6425),
                             ImageUrl = "/images/products/blender.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -727,7 +727,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 15,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1721),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6426),
                             ImageUrl = "/images/products/microwave.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -739,7 +739,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 16,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1723),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6428),
                             ImageUrl = "/images/products/camera.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -751,7 +751,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 17,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1725),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6429),
                             ImageUrl = "/images/products/watch.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -763,7 +763,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 18,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1726),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6432),
                             ImageUrl = "/images/products/backpack.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -775,7 +775,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 19,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1727),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6435),
                             ImageUrl = "/images/products/desk_lamp.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -787,7 +787,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 20,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1729),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6436),
                             ImageUrl = "/images/products/electric_kettle.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -799,7 +799,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 21,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1730),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6437),
                             ImageUrl = "/images/products/gaming_chair.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -811,7 +811,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 22,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1732),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6438),
                             ImageUrl = "/images/products/sunglasses.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -823,7 +823,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 23,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1733),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6440),
                             ImageUrl = "/images/products/sneakers.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -835,7 +835,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 24,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1734),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6441),
                             ImageUrl = "/images/products/coffee_maker.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -847,7 +847,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 25,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1736),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6442),
                             ImageUrl = "/images/products/vacuum_cleaner.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -859,7 +859,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 26,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1737),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6443),
                             ImageUrl = "/images/products/air_conditioner.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -871,7 +871,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 27,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1738),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6444),
                             ImageUrl = "/images/products/electric_toothbrush.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -883,7 +883,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 28,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1741),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6445),
                             ImageUrl = "/images/products/hair_dryer.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -895,7 +895,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 29,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1742),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6447),
                             ImageUrl = "/images/products/smart_tv.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -907,7 +907,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 30,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1744),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6448),
                             ImageUrl = "/images/products/gaming_console.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -919,7 +919,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 31,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1745),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6450),
                             ImageUrl = "/images/products/wireless_mouse.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -931,7 +931,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 32,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1746),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6451),
                             ImageUrl = "/images/products/keyboard.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -943,7 +943,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 33,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1748),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6452),
                             ImageUrl = "/images/products/monitor.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -955,7 +955,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 34,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1750),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6453),
                             ImageUrl = "/images/products/printer.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -967,7 +967,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 35,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1751),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6491),
                             ImageUrl = "/images/products/router.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -979,7 +979,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 36,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1752),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6493),
                             ImageUrl = "/images/products/external_hard_drive.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -991,7 +991,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 37,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1754),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6494),
                             ImageUrl = "/images/products/flash_drive.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1003,7 +1003,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 38,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1755),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6495),
                             ImageUrl = "/images/products/power_bank.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1015,7 +1015,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 39,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1756),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6497),
                             ImageUrl = "/images/products/wireless_charger.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1027,7 +1027,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 40,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1758),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6498),
                             ImageUrl = "/images/products/smart_light_bulb.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1039,7 +1039,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 41,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1759),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6499),
                             ImageUrl = "/images/products/security_camera.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1051,7 +1051,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 42,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1760),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6501),
                             ImageUrl = "/images/products/fitness_tracker.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1063,7 +1063,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 43,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1762),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6502),
                             ImageUrl = "/images/products/electric_scooter.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1075,7 +1075,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 44,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1763),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6504),
                             ImageUrl = "/images/products/drone.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1087,7 +1087,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 45,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1764),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6505),
                             ImageUrl = "/images/products/action_camera.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1099,7 +1099,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 46,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1766),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6507),
                             ImageUrl = "/images/products/electric_shaver.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1111,7 +1111,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 47,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1767),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6509),
                             ImageUrl = "/images/products/hair_straightener.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1123,7 +1123,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 48,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1768),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6511),
                             ImageUrl = "/images/products/electric_grill.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1135,7 +1135,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 49,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1770),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6512),
                             ImageUrl = "/images/products/rice_cooker.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1147,7 +1147,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 50,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1772),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6513),
                             ImageUrl = "/images/products/air_fryer.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1159,7 +1159,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 51,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1773),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6515),
                             ImageUrl = "/images/products/electric_blanket.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1171,7 +1171,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 52,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1774),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6516),
                             ImageUrl = "/images/products/water_filter.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1183,7 +1183,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 53,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1776),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6518),
                             ImageUrl = "/images/products/electric_heater.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1195,7 +1195,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 54,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1777),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6519),
                             ImageUrl = "/images/products/dehumidifier.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1207,7 +1207,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 55,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1784),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6520),
                             ImageUrl = "/images/products/humidifier.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1219,7 +1219,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 56,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1786),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6521),
                             ImageUrl = "/images/products/electric_fan.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1231,7 +1231,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 57,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1787),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6522),
                             ImageUrl = "/images/products/electric_iron.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1243,7 +1243,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 58,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1788),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6524),
                             ImageUrl = "/images/products/sewing_machine.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1255,7 +1255,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 59,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1790),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6525),
                             ImageUrl = "/images/products/electric_screwdriver.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1267,7 +1267,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 60,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1791),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6526),
                             ImageUrl = "/images/products/cordless_drill.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1279,7 +1279,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 61,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1792),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6528),
                             ImageUrl = "/images/products/tool_set.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1291,7 +1291,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 62,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1793),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6530),
                             ImageUrl = "/images/products/lawn_mower.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1303,7 +1303,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 63,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1795),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6531),
                             ImageUrl = "/images/products/garden_hose.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1315,7 +1315,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 64,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1796),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6532),
                             ImageUrl = "/images/products/bbq_grill.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1327,7 +1327,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 65,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1798),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6533),
                             ImageUrl = "/images/products/tent.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1339,7 +1339,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 66,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1799),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6535),
                             ImageUrl = "/images/products/sleeping_bag.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1351,7 +1351,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 67,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1801),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6536),
                             ImageUrl = "/images/products/camping_stove.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1363,7 +1363,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 68,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1802),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6537),
                             ImageUrl = "/images/products/hiking_backpack.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1375,7 +1375,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 69,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1803),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6538),
                             ImageUrl = "/images/products/binoculars.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1387,7 +1387,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 70,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1805),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6539),
                             ImageUrl = "/images/products/fishing_rod.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1399,7 +1399,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 71,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1806),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6541),
                             ImageUrl = "/images/products/yoga_mat.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1411,7 +1411,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 72,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1807),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6542),
                             ImageUrl = "/images/products/dumbbell_set.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1423,7 +1423,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 73,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1809),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6543),
                             ImageUrl = "/images/products/treadmill.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1435,7 +1435,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 74,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1810),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6544),
                             ImageUrl = "/images/products/exercise_bike.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1447,7 +1447,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 75,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1811),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6546),
                             ImageUrl = "/images/products/rowing_machine.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1459,7 +1459,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 76,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1812),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6547),
                             ImageUrl = "/images/products/elliptical_trainer.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1471,7 +1471,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 77,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1814),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6548),
                             ImageUrl = "/images/products/weight_bench.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1483,7 +1483,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 78,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1815),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6550),
                             ImageUrl = "/images/products/pull_up_bar.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1495,7 +1495,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 79,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1816),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6551),
                             ImageUrl = "/images/products/resistance_bands.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1507,7 +1507,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 80,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1818),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6552),
                             ImageUrl = "/images/products/jump_rope.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1519,7 +1519,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 81,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1821),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6554),
                             ImageUrl = "/images/products/basketball.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1531,7 +1531,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 82,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1822),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6560),
                             ImageUrl = "/images/products/soccer_ball.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1543,7 +1543,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 83,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1823),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6561),
                             ImageUrl = "/images/products/tennis_racket.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1555,7 +1555,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 84,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1824),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6562),
                             ImageUrl = "/images/products/badminton_set.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1567,7 +1567,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 85,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1826),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6563),
                             ImageUrl = "/images/products/golf_clubs.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1579,7 +1579,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 86,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1827),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6564),
                             ImageUrl = "/images/products/skateboard.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1591,7 +1591,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 87,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1828),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6566),
                             ImageUrl = "/images/products/roller_skates.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1603,7 +1603,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 88,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1830),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6567),
                             ImageUrl = "/images/products/helmet.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1615,7 +1615,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 89,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1831),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6626),
                             ImageUrl = "/images/products/knee_pads.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1627,7 +1627,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 90,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1832),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6628),
                             ImageUrl = "/images/products/elbow_pads.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1639,7 +1639,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 91,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1833),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6629),
                             ImageUrl = "/images/products/wrist_guards.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1651,7 +1651,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 92,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1835),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6631),
                             ImageUrl = "/images/products/bike_lock.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1663,7 +1663,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 93,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1836),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6636),
                             ImageUrl = "/images/products/bike_pump.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1675,7 +1675,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 94,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1837),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6637),
                             ImageUrl = "/images/products/bike_light.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1687,7 +1687,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 95,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1839),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6638),
                             ImageUrl = "/images/products/bike_bell.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1699,7 +1699,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 96,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1840),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6640),
                             ImageUrl = "/images/products/bike_basket.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1711,7 +1711,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 97,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1842),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6641),
                             ImageUrl = "/images/products/bike_rack.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1723,7 +1723,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 98,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1843),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6642),
                             ImageUrl = "/images/products/bike_seat.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1735,7 +1735,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 99,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1844),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6643),
                             ImageUrl = "/images/products/bike_gloves.jpg",
                             IsActive = true,
                             IsDeleted = false,
@@ -1747,7 +1747,7 @@ namespace EShop.Data.Migrations
                         new
                         {
                             Id = 100,
-                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 10, 305, DateTimeKind.Utc).AddTicks(1846),
+                            CreateDate = new DateTime(2025, 2, 8, 12, 5, 26, 453, DateTimeKind.Utc).AddTicks(6644),
                             ImageUrl = "/images/products/bike_shorts.jpg",
                             IsActive = true,
                             IsDeleted = false,

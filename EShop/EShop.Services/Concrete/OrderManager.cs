@@ -51,7 +51,7 @@ public class OrderManager : IOrderService
             await _orderRepository.AddAsync(order);
             await _unitOfWork.SaveAsync();
             //OrderItem'larla ilgili ekstra bir işlem yapmayıp, bunu izleyip sonuçlarını değerlendireceğiz. Gerekirse buraya gelip yapmamız gerekenleri yapacağız.
-            await _cartManager.ClearCartAsync(orderCreateDto.ApplicationUserId);
+            await _cartManager.ClearCartAsync(orderCreateDto.ApplicationUserId!);
             var orderDto = _mapper.Map<OrderDto>(order);
             return ResponseDto<OrderDto>.Success(orderDto, StatusCodes.Status201Created);
         }
@@ -168,7 +168,7 @@ public class OrderManager : IOrderService
         }
     }
 
-    public async Task<ResponseDto<IEnumerable<OrderDto>>> GetAllAsync(DateTime startDate, DateTime endDate)
+    public async Task<ResponseDto<IEnumerable<OrderDto>>> GetAllAsync(DateTime? startDate, DateTime endDate)
     {
         try
         {

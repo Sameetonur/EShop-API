@@ -23,6 +23,11 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEnt
         return entity;
     }
 
+    public void BatchUpdate(IEnumerable<TEntity> entities)
+    {
+        _dbSet.UpdateRange(entities);
+    }
+
     public async Task<int> CountAsync()
     {
         return await _dbSet.CountAsync();
@@ -48,11 +53,12 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEnt
         return await _dbSet.ToListAsync();
     }
 
-    public async Task<IEnumerable<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>> predicate = null!, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null!, 
-    bool showIsDeleted=false, params Func<IQueryable<TEntity>, IQueryable<TEntity>>[] includes)
+    public async Task<IEnumerable<TEntity>> GetAllAsync(Expression<Func<TEntity, bool>> predicate = null!, Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null!,
+    bool showIsDeleted = false, params Func<IQueryable<TEntity>, IQueryable<TEntity>>[] includes)
     {
         IQueryable<TEntity> query = _dbSet;
-        if(showIsDeleted){
+        if (showIsDeleted)
+        {
             query = query.IgnoreQueryFilters();
         }
         if (predicate != null)
@@ -72,11 +78,12 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEnt
 
     public async Task<TEntity> GetAsync(int id)
     {
-        return await _dbSet.FindAsync(id);
+        var result = await _dbSet.FindAsync(id);
+        return result!;
     }
 
     public async Task<TEntity> GetAsync(
-        Expression<Func<TEntity, bool>> predicate, 
+        Expression<Func<TEntity, bool>> predicate,
         params Func<IQueryable<TEntity>, IQueryable<TEntity>>[] includes
         )
     {
@@ -85,33 +92,22 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEnt
         {
             query = query.Where(predicate);
         }
-        if(includes!=null)
+        if (includes != null)
         {
             query = includes.Aggregate(query, (current, include) => include(current));
         }
 
         var result = await query.FirstOrDefaultAsync();
-        return result;
-        
+        return result!;
+
     }
 
     public void Update(TEntity entity)
     {
         _dbSet.Update(entity);
+        //UPDATE 
     }
 
-    
+
 }
 
-
-//_dbSet=context.Products();
-//query=context.Products();
-//predicate= p=>p.IsDeleted==true
-//query= context.Products.Where(p=>p.IsDeleted==false)
-//includes[]=[Include(x=>x.Category),Include(x=>x.Brand)]
-/*query= context
-    .Products
-    .Where(p=>p.IsDeleted==false)
-    .Include(x=>x.Category)
-    .Include(x=>x.Brand)
-*/

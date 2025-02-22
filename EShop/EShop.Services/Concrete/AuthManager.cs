@@ -2,6 +2,7 @@ using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using Azure;
 using Azure.Core;
 using EShop.Entity.Concrete;
 using EShop.Services.Abstract;
@@ -19,8 +20,8 @@ namespace EShop.Services.Concrete;
 public class AuthManager : IAuthService
 {
     private readonly UserManager<ApplicationUser> _userManager;
-    private readonly SignInManager<ApplicationUser> _signInManager;
     private readonly IEmailService _emailManager;
+    private readonly SignInManager<ApplicationUser> _signInManager;
     private JwtConfig _jwtConfig;
     //Aslında burada başka servisler de olacak, ancak henüz yazmadık.
     public AuthManager(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IOptions<JwtConfig> options, IEmailService emailManager)
@@ -35,32 +36,71 @@ public class AuthManager : IAuthService
     {
         try
         {
+            if (changePasswordDto.UserName == null)
+            {
+                return ResponseDto<NoContent>.Fail("Username yanlış", StatusCodes.Status404NotFound);
+            }
             var user = await _userManager.FindByNameAsync(changePasswordDto.UserName!);
             if (user == null)
             {
                 return ResponseDto<NoContent>.Fail("Kullanıcı bulunamadı!", StatusCodes.Status404NotFound);
             }
+
             var isValidPassword = await _userManager.CheckPasswordAsync(user, changePasswordDto.CurrentPassword!);
             if (!isValidPassword)
             {
-                return ResponseDto<NoContent>.Fail("Mevcut şifre hatalı!", StatusCodes.Status400BadRequest);
+                return ResponseDto<NoContent>.Fail("Mevcut Şifre Hatalı!", StatusCodes.Status404NotFound);
             }
+
             var result = await _userManager.ChangePasswordAsync(user, changePasswordDto.CurrentPassword!, changePasswordDto.NewPassword!);
             if (!result.Succeeded)
             {
-                return ResponseDto<NoContent>.Fail(
+                return ResponseDto<NoContent>.Fail
+                (
                     result.Errors.Select(x => x.Description).ToList(), StatusCodes.Status400BadRequest
                 );
             }
             return ResponseDto<NoContent>.Success(StatusCodes.Status200OK);
+
         }
-        catch (Exception ex)
+        catch (System.Exception ex)
         {
             return ResponseDto<NoContent>.Fail(ex.Message, StatusCodes.Status500InternalServerError);
         }
     }
 
+    public async Task<ResponseDto<NoContent>> ForgotPasswordAsync(ForgotPasswordDto forgotPasswordDto)
+    {
+        try
+        {
+            var user = await _userManager.FindByEmailAsync(forgotPasswordDto.Email!);
+            if (user == null)
+            {
+                return ResponseDto<NoContent>.Fail("Kullanıcı bulunamadı!", StatusCodes.Status404NotFound);
+            }
 
+            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+
+            var resetLink = $"http://lochalhost:5220/auth/resetpassword?token={token}&email={forgotPasswordDto.Email}";
+            var htmlBody = $"<p>Şifrenizi sıfırlamak için aşağıdaki linke tıklayınız!:</p> <a href='{resetLink}'>Şifre Yenileme Sayfası</a>";
+            var response = await _emailManager.SendEmailAsync(
+                forgotPasswordDto.Email!,
+                "EShop Şİfre Sıfırlama Talebi",
+                htmlBody
+             );
+
+            if (!response.IsSuccessful)
+            {
+                return ResponseDto<NoContent>.Fail(response.Error!, response.StatusCode);
+
+            }
+            return ResponseDto<NoContent>.Success(StatusCodes.Status200OK);
+        }
+        catch (System.Exception ex)
+        {
+            return ResponseDto<NoContent>.Fail(ex.Message, StatusCodes.Status500InternalServerError);
+        }
+    }
 
     public async Task<ResponseDto<TokenDto>> LoginAsync(LoginDto loginDto)
     {
@@ -91,7 +131,7 @@ public class AuthManager : IAuthService
     {
         try
         {
-            var existingUser = await _userManager.FindByNameAsync(registerDto.UserName);
+            var existingUser = await _userManager.FindByNameAsync(registerDto.UserName!);
             if (existingUser != null)
             {
                 return ResponseDto<ApplicationUserDto>.Fail("Bu kullanıcı adı zaten kullanılmakta", StatusCodes.Status400BadRequest);
@@ -109,12 +149,12 @@ public class AuthManager : IAuthService
                 Address = registerDto.Address,
                 City = registerDto.City
             };
-            var result = await _userManager.CreateAsync(user, registerDto.Password);
+            var result = await _userManager.CreateAsync(user, registerDto.Password!);
             if (!result.Succeeded)
             {
                 return ResponseDto<ApplicationUserDto>.Fail("Kullanıcı oluşturulurken bir hata oluştu", StatusCodes.Status400BadRequest);
             }
-            result = await _userManager.AddToRoleAsync(user, registerDto.Role);
+            result = await _userManager.AddToRoleAsync(user, registerDto.Role!);
             if (!result.Succeeded)
             {
                 return ResponseDto<ApplicationUserDto>.Fail("Kullanıcı rolü atanırken bir hata oluştu", StatusCodes.Status400BadRequest);
@@ -138,57 +178,26 @@ public class AuthManager : IAuthService
         }
     }
 
-    public async Task<ResponseDto<NoContent>> ForgotPasswordAsync(ForgotPasswordDto forgotPasswordDto)
+    public async Task<ResponseDto<NoContent>> ResetPasswordAsync(ResetPasswordDto resetPasswordDto)
     {
+
         try
         {
-            var user = await _userManager.FindByEmailAsync(forgotPasswordDto.Email!);
+            var user = await _userManager.FindByEmailAsync(resetPasswordDto.Email!);
             if (user == null)
             {
-                return ResponseDto<NoContent>.Fail("Kullanıcı bulunamadı!", StatusCodes.Status404NotFound);
+                return ResponseDto<NoContent>.Fail("Kullanıcı bulunamadı", StatusCodes.Status404NotFound);
             }
-            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
-            //http://localhost:5220/auth/resetpassword?token=sfhsadhj4+^%+^%+ETRsdfjksdfdsahfasdhfdsalfhdslkjfhdsajhdsalfjk&email=aysefatma@gmail.com
-            var resetLink = $"http://localhost:5220/auth/resetpassword?token={token}&email={forgotPasswordDto.Email}";
-            var htmlBody = $"<p>Şifrenizi değiştirmek için aşağıdaki linke tıklayınız:</p><a href='{resetLink}'>Şifremi Değiştir</a>";
-            var response = await _emailManager.SendEmailAsync(
-                forgotPasswordDto.Email!,
-                "EShop Şifre Sıfırlama Talebi",
-                htmlBody
-            );
-            if (!response.IsSuccessful)
+            var result = await _userManager.ResetPasswordAsync(user, resetPasswordDto.Token!, resetPasswordDto.Password!);
+            if (!result.Succeeded)
             {
-                return ResponseDto<NoContent>.Fail(response.Error!, response.StatusCode);
+                return ResponseDto<NoContent>.Fail("şifre sıfırlama sırasında bir sorun oluştu.", StatusCodes.Status400BadRequest);
             }
             return ResponseDto<NoContent>.Success(StatusCodes.Status200OK);
         }
         catch (Exception ex)
         {
             return ResponseDto<NoContent>.Fail(ex.Message, StatusCodes.Status500InternalServerError);
-        }
-    }
-
-    public async Task<ResponseDto<NoContent>> ResetPasswordAsync(ResetPasswordDto resetPasswordDto)
-    {
-        try
-        {
-            var user = await _userManager.FindByEmailAsync(resetPasswordDto.Email!);
-            if (user == null)
-            {
-                return ResponseDto<NoContent>.Fail("Kullanıcı bulunamadı!", StatusCodes.Status404NotFound);
-            }
-            var result = await _userManager.ResetPasswordAsync(user, resetPasswordDto.Token!, resetPasswordDto.Password!);
-            if (!result.Succeeded)
-            {
-                return ResponseDto<NoContent>.Fail("Şifre sıfırlama sırasında bir sorun oluştu!", StatusCodes.Status500InternalServerError);
-            }
-            return ResponseDto<NoContent>.Success(StatusCodes.Status200OK);
-        }
-
-        catch (Exception ex)
-        {
-           return ResponseDto<NoContent>.Fail(ex.Message,StatusCodes.Status500InternalServerError);
-
         }
     }
 
@@ -200,11 +209,11 @@ public class AuthManager : IAuthService
             var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.NameIdentifier, user.Id),
-                new Claim(ClaimTypes.Name, user.UserName),
+                new Claim(ClaimTypes.Name, user.UserName!),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             }.Union(roles.Select(x => new Claim(ClaimTypes.Role, x)));
 
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtConfig.Secret));
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtConfig.Secret!));
             var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
             var expiry = DateTime.Now.AddDays(Convert.ToDouble(_jwtConfig.AccessTokenExpiration));
 

@@ -22,5 +22,7 @@ public interface IGenericRepository<TEntity> where TEntity : class
     Task<int> CountAsync(Expression<Func<TEntity, bool>> predicate);
     Task<TEntity> AddAsync(TEntity entity);
     void Update(TEntity entity);
+
+    void BatchUpdate(IEnumerable<TEntity> entities);
     void Delete(TEntity entity);
 }

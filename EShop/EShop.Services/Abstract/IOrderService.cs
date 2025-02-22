@@ -11,7 +11,7 @@ public interface IOrderService
     Task<ResponseDto<IEnumerable<OrderDto>>> GetAllAsync();
     Task<ResponseDto<IEnumerable<OrderDto>>> GetAllAsync(OrderStatus orderStatus, string? applicationUserId = null);
     Task<ResponseDto<IEnumerable<OrderDto>>> GetAllAsync(string applicationUserId);
-    Task<ResponseDto<IEnumerable<OrderDto>>> GetAllAsync(DateTime startDate, DateTime endDate);
+    Task<ResponseDto<IEnumerable<OrderDto>>> GetAllAsync(DateTime? startDate, DateTime endDate);
     Task<ResponseDto<OrderDto>> AddAsync(OrderCreateDto orderCreateDto);
     Task<ResponseDto<NoContent>> UpdateOrderStatusAsync(int id, OrderStatus orderStatus);
     Task<ResponseDto<NoContent>> CancelOrderAsync(int id);

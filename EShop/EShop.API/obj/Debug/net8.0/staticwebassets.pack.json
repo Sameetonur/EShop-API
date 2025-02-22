@@ -1,0 +1,221 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\categories\\bebek-cocuk.png",
+      "PackagePath": "staticwebassets\\images\\categories\\bebek-cocuk.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\categories\\elektronik.png",
+      "PackagePath": "staticwebassets\\images\\categories\\elektronik.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\categories\\ev-yasam.png",
+      "PackagePath": "staticwebassets\\images\\categories\\ev-yasam.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\categories\\kitap-dergi.png",
+      "PackagePath": "staticwebassets\\images\\categories\\kitap-dergi.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\categories\\kozmetik-bakim.png",
+      "PackagePath": "staticwebassets\\images\\categories\\kozmetik-bakim.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\categories\\moda.png",
+      "PackagePath": "staticwebassets\\images\\categories\\moda.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\categories\\otomotiv.png",
+      "PackagePath": "staticwebassets\\images\\categories\\otomotiv.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\categories\\oyuncak-hobi.png",
+      "PackagePath": "staticwebassets\\images\\categories\\oyuncak-hobi.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\categories\\seyahat-valiz.png",
+      "PackagePath": "staticwebassets\\images\\categories\\seyahat-valiz.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\categories\\spor-outdoor.png",
+      "PackagePath": "staticwebassets\\images\\categories\\spor-outdoor.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\baby-clothes.png",
+      "PackagePath": "staticwebassets\\images\\products\\baby-clothes.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\bag.png",
+      "PackagePath": "staticwebassets\\images\\products\\bag.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\bed-sheet.png",
+      "PackagePath": "staticwebassets\\images\\products\\bed-sheet.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\bike.png",
+      "PackagePath": "staticwebassets\\images\\products\\bike.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\coloring-book.png",
+      "PackagePath": "staticwebassets\\images\\products\\coloring-book.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\diapers.png",
+      "PackagePath": "staticwebassets\\images\\products\\diapers.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\dinner-set.png",
+      "PackagePath": "staticwebassets\\images\\products\\dinner-set.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\doll.png",
+      "PackagePath": "staticwebassets\\images\\products\\doll.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\earbuds.png",
+      "PackagePath": "staticwebassets\\images\\products\\earbuds.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\gloves.png",
+      "PackagePath": "staticwebassets\\images\\products\\gloves.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\gym-bag.png",
+      "PackagePath": "staticwebassets\\images\\products\\gym-bag.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\kids-bike.png",
+      "PackagePath": "staticwebassets\\images\\products\\kids-bike.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\kids-book.png",
+      "PackagePath": "staticwebassets\\images\\products\\kids-book.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\lamp.png",
+      "PackagePath": "staticwebassets\\images\\products\\lamp.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\laptop.png",
+      "PackagePath": "staticwebassets\\images\\products\\laptop.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\lego.png",
+      "PackagePath": "staticwebassets\\images\\products\\lego.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\lipstick.png",
+      "PackagePath": "staticwebassets\\images\\products\\lipstick.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\magazine.png",
+      "PackagePath": "staticwebassets\\images\\products\\magazine.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\men-jacket.png",
+      "PackagePath": "staticwebassets\\images\\products\\men-jacket.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\model-plane.png",
+      "PackagePath": "staticwebassets\\images\\products\\model-plane.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\moisturizer.png",
+      "PackagePath": "staticwebassets\\images\\products\\moisturizer.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\novel.png",
+      "PackagePath": "staticwebassets\\images\\products\\novel.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\perfume.png",
+      "PackagePath": "staticwebassets\\images\\products\\perfume.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\puzzle.png",
+      "PackagePath": "staticwebassets\\images\\products\\puzzle.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\razor.png",
+      "PackagePath": "staticwebassets\\images\\products\\razor.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\rc-car.png",
+      "PackagePath": "staticwebassets\\images\\products\\rc-car.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\sci-fi.png",
+      "PackagePath": "staticwebassets\\images\\products\\sci-fi.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\self-help.png",
+      "PackagePath": "staticwebassets\\images\\products\\self-help.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\shampoo.png",
+      "PackagePath": "staticwebassets\\images\\products\\shampoo.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\smartphone.png",
+      "PackagePath": "staticwebassets\\images\\products\\smartphone.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\smartwatch.png",
+      "PackagePath": "staticwebassets\\images\\products\\smartwatch.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\sneakers.png",
+      "PackagePath": "staticwebassets\\images\\products\\sneakers.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\sofa.png",
+      "PackagePath": "staticwebassets\\images\\products\\sofa.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\stroller.png",
+      "PackagePath": "staticwebassets\\images\\products\\stroller.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\sunglasses.png",
+      "PackagePath": "staticwebassets\\images\\products\\sunglasses.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\tablet.png",
+      "PackagePath": "staticwebassets\\images\\products\\tablet.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\tent.png",
+      "PackagePath": "staticwebassets\\images\\products\\tent.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\treadmill.png",
+      "PackagePath": "staticwebassets\\images\\products\\treadmill.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\vacuum.png",
+      "PackagePath": "staticwebassets\\images\\products\\vacuum.png"
+    },
+    {
+      "Id": "D:\\GitHubb\\BackendMasteryBootcamp\\İleri Seviye MVC\\Week12\\22-02-2025\\EShop\\Backend\\EShop.API\\wwwroot\\images\\products\\women-dress.png",
+      "PackagePath": "staticwebassets\\images\\products\\women-dress.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.EShop.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.EShop.API.props",
+      "PackagePath": "build\\EShop.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.EShop.API.props",
+      "PackagePath": "buildMultiTargeting\\EShop.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.EShop.API.props",
+      "PackagePath": "buildTransitive\\EShop.API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

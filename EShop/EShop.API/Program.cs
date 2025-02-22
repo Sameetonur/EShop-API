@@ -37,7 +37,7 @@ builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
     options.User.RequireUniqueEmail = true;
 }).AddEntityFrameworkStores<EShopDbContext>().AddDefaultTokenProviders();
 
-builder.Services.Configure<JwtConfig>(builder.Configuration.GetSection("JwtConfig"));
+builder.Services.Configure<JwtConfig>(builder.Configuration.GetSection("JwtConfig")); // builder.conffigurations appsetting.json dan bahsediyoruz.
 
 var jwtConfig = builder.Configuration.GetSection("JwtConfig").Get<JwtConfig>();
 
@@ -59,18 +59,19 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
+
 builder.Services.Configure<EmailConfig>(builder.Configuration.GetSection("EmailConfig"));
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
+builder.Services.AddScoped<IEmailService, EmailManager>();
 builder.Services.AddScoped<IAuthService, AuthManager>();
 builder.Services.AddScoped<ICategoryService, CategoryManager>();
 builder.Services.AddScoped<IProductService, ProductManager>();
 builder.Services.AddScoped<ICartService, CartManager>();
 builder.Services.AddScoped<IOrderService, OrderManager>();
 builder.Services.AddScoped<IImageService, ImageManager>();
-builder.Services.AddScoped<IEmailService, EmailManager>();
 
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 

@@ -6,6 +6,7 @@ using EShop.Services.Abstract;
 using EShop.Shared.Dtos;
 using EShop.Shared.Dtos.ResponseDtos;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 
 namespace EShop.Services.Concrete
 {
@@ -28,7 +29,7 @@ namespace EShop.Services.Concrete
         {
             try
             {
-                var isExists = await _categoryRepository.ExistsAsync(x => x.Name.ToLower() == categoryCreateDto.Name.ToLower());
+                var isExists = await _categoryRepository.ExistsAsync(x => EF.Functions.Like(x.Name, categoryCreateDto.Name));
                 if (isExists)
                 {
                     return ResponseDto<CategoryDto>.Fail("Bu adda kategori mevcut!", StatusCodes.Status400BadRequest);
@@ -39,17 +40,18 @@ namespace EShop.Services.Concrete
                 {
                     return ResponseDto<CategoryDto>.Fail("Kategori resmi boş olamaz!", StatusCodes.Status400BadRequest);
                 }
-                var imageResponse = await _imageManager.UploadImageAsync(categoryCreateDto.Image);
+                var imageResponse = await _imageManager.UploadImageAsync(categoryCreateDto.Image, "categories");
                 if (!imageResponse.IsSuccessful)
                 {
-                    return ResponseDto<CategoryDto>.Fail(imageResponse.Error, imageResponse.StatusCode);
+                    return ResponseDto<CategoryDto>.Fail(imageResponse.Error!, imageResponse.StatusCode);
                 }
-                category.ImageUrl = imageResponse.Data ?? "/images/default-category.png";
+                category.ImageUrl = imageResponse.Data!;
 
                 await _categoryRepository.AddAsync(category);
                 var result = await _unitOfWork.SaveAsync();
                 if (result < 1)
                 {
+                    _imageManager.DeleteImage(category.ImageUrl);
                     return ResponseDto<CategoryDto>.Fail("Kategori eklenirken bir hata oluştu!", StatusCodes.Status500InternalServerError);
                 }
                 var categoryDto = _mapper.Map<CategoryDto>(category);
@@ -219,21 +221,22 @@ namespace EShop.Services.Concrete
                     return ResponseDto<NoContent>.Fail("Pasif kategoriler güncellenemez! Önce güncellemek istediğiniz kategoriyo Aktif duruma getirmeniz gerekir!", StatusCodes.Status400BadRequest);
                 }
 
-                var existsCategoryName = await _categoryRepository.ExistsAsync(x => x.Name.ToLower() == categoryUpdateDto.Name.ToLower());
-                if (existsCategoryName)
+                var isExists = await _categoryRepository.ExistsAsync(x => EF.Functions.Like(x.Name, categoryUpdateDto.Name));
+                if (isExists && categoryUpdateDto.Name != category.Name)
                 {
                     return ResponseDto<NoContent>.Fail("Bu adda kategori mevcut!", StatusCodes.Status400BadRequest);
                 }
                 //Resim operasyonu
+                var oldImageUrl = string.Empty;
                 if (categoryUpdateDto.Image != null)
                 {
-                    var imageResponse = await _imageManager.UploadImageAsync(categoryUpdateDto.Image);
+                    var imageResponse = await _imageManager.UploadImageAsync(categoryUpdateDto.Image, "categories");
                     if (!imageResponse.IsSuccessful)
                     {
-                        return ResponseDto<NoContent>.Fail(imageResponse.Error, imageResponse.StatusCode);
+                        return ResponseDto<NoContent>.Fail(imageResponse.Error!, imageResponse.StatusCode);
                     }
-                    _imageManager.DeleteImage(category.ImageUrl);
-                    category.ImageUrl = imageResponse.Data ?? "/images/default-category.png";
+                    oldImageUrl = category.ImageUrl;
+                    category.ImageUrl = imageResponse.Data!;
 
                 }
                 _mapper.Map(categoryUpdateDto, category);
@@ -241,9 +244,11 @@ namespace EShop.Services.Concrete
                 var result = await _unitOfWork.SaveAsync();
                 if (result < 1)
                 {
+                    _imageManager.DeleteImage(Path.Combine("categories", category.ImageUrl));
                     return ResponseDto<NoContent>.Fail("Kategori güncellenirken bir hata oluştu!", StatusCodes.Status500InternalServerError);
                 }
-                return ResponseDto<NoContent>.Success(StatusCodes.Status204NoContent);
+                _imageManager.DeleteImage(Path.Combine("categories", oldImageUrl));
+                return ResponseDto<NoContent>.Success(StatusCodes.Status200OK);
             }
             catch (Exception ex)
             {
@@ -263,7 +268,8 @@ namespace EShop.Services.Concrete
                 var hasProducts = await _unitOfWork.GetRepository<ProductCategory>().ExistsAsync(x => x.CategoryId == id);
                 if (hasProducts)
                 {
-                    return ResponseDto<bool>.Fail("Bu kategoriye ait ürünler olduğu için pasif hale getirilemez!", StatusCodes.Status400BadRequest);
+                    // return ResponseDto<bool>.Fail("Bu kategoriye ait ürünler olduğu için pasif hale getirilemez!", StatusCodes.Status400BadRequest);
+                    //o zaman bu kategorideki tüm ürünlerin IsActive durumunu false yapalım
                 }
                 category.IsActive = !category.IsActive;
                 _categoryRepository.Update(category);

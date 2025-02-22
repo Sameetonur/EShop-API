@@ -41,7 +41,7 @@ namespace EShop.API.Controllers
         public async Task<IActionResult> ChangePassword(ChangePasswordDto changePasswordDto)
         {
             var response = await _authService.ChangePasswordAsync(changePasswordDto);
-            return StatusCode(response.StatusCode, response);
+            return StatusCode(response.StatusCode,response);
         }
 
         [HttpPost("pass/forgot")]
@@ -57,6 +57,7 @@ namespace EShop.API.Controllers
             var response = await _authService.ResetPasswordAsync(resetPasswordDto);
             return StatusCode(response.StatusCode, response);
         }
+
 
     }
 }

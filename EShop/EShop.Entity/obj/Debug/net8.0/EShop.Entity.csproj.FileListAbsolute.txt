@@ -1,0 +1,64 @@
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\08-02-2025\EShop\EShop.Entity\bin\Debug\net8.0\EShop.Entity.deps.json
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\08-02-2025\EShop\EShop.Entity\bin\Debug\net8.0\EShop.Entity.dll
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\08-02-2025\EShop\EShop.Entity\bin\Debug\net8.0\EShop.Entity.pdb
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\08-02-2025\EShop\EShop.Entity\bin\Debug\net8.0\EShop.Shared.dll
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\08-02-2025\EShop\EShop.Entity\bin\Debug\net8.0\EShop.Shared.pdb
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\08-02-2025\EShop\EShop.Entity\obj\Debug\net8.0\EShop.Entity.csproj.AssemblyReference.cache
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\08-02-2025\EShop\EShop.Entity\obj\Debug\net8.0\EShop.Entity.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\08-02-2025\EShop\EShop.Entity\obj\Debug\net8.0\EShop.Entity.AssemblyInfoInputs.cache
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\08-02-2025\EShop\EShop.Entity\obj\Debug\net8.0\EShop.Entity.AssemblyInfo.cs
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\08-02-2025\EShop\EShop.Entity\obj\Debug\net8.0\EShop.Entity.csproj.CoreCompileInputs.cache
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\08-02-2025\EShop\EShop.Entity\obj\Debug\net8.0\EShop.Entity.sourcelink.json
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\08-02-2025\EShop\EShop.Entity\obj\Debug\net8.0\EShop.En.2F1A13A4.Up2Date
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\08-02-2025\EShop\EShop.Entity\obj\Debug\net8.0\EShop.Entity.dll
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\08-02-2025\EShop\EShop.Entity\obj\Debug\net8.0\refint\EShop.Entity.dll
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\08-02-2025\EShop\EShop.Entity\obj\Debug\net8.0\EShop.Entity.pdb
+D:\GitHubb\BackendMasteryBootcamp\03-API\Week10\08-02-2025\EShop\EShop.Entity\obj\Debug\net8.0\ref\EShop.Entity.dll
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Backend\EShop.Entity\bin\Debug\net8.0\EShop.Entity.deps.json
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Backend\EShop.Entity\bin\Debug\net8.0\EShop.Entity.dll
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Backend\EShop.Entity\bin\Debug\net8.0\EShop.Entity.pdb
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Backend\EShop.Entity\bin\Debug\net8.0\EShop.Shared.dll
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Backend\EShop.Entity\bin\Debug\net8.0\EShop.Shared.pdb
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Backend\EShop.Entity\obj\Debug\net8.0\EShop.Entity.csproj.AssemblyReference.cache
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Backend\EShop.Entity\obj\Debug\net8.0\EShop.Entity.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Backend\EShop.Entity\obj\Debug\net8.0\EShop.Entity.AssemblyInfoInputs.cache
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Backend\EShop.Entity\obj\Debug\net8.0\EShop.Entity.AssemblyInfo.cs
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Backend\EShop.Entity\obj\Debug\net8.0\EShop.Entity.csproj.CoreCompileInputs.cache
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Backend\EShop.Entity\obj\Debug\net8.0\EShop.Entity.sourcelink.json
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Backend\EShop.Entity\obj\Debug\net8.0\EShop.En.2F1A13A4.Up2Date
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Backend\EShop.Entity\obj\Debug\net8.0\EShop.Entity.dll
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Backend\EShop.Entity\obj\Debug\net8.0\refint\EShop.Entity.dll
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Backend\EShop.Entity\obj\Debug\net8.0\EShop.Entity.pdb
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\15-02-2025\EShop\Backend\EShop.Entity\obj\Debug\net8.0\ref\EShop.Entity.dll
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\16-02-2025\EShop\Backend\EShop.Entity\bin\Debug\net8.0\EShop.Entity.deps.json
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\16-02-2025\EShop\Backend\EShop.Entity\bin\Debug\net8.0\EShop.Entity.dll
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\16-02-2025\EShop\Backend\EShop.Entity\bin\Debug\net8.0\EShop.Entity.pdb
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\16-02-2025\EShop\Backend\EShop.Entity\bin\Debug\net8.0\EShop.Shared.dll
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\16-02-2025\EShop\Backend\EShop.Entity\bin\Debug\net8.0\EShop.Shared.pdb
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\16-02-2025\EShop\Backend\EShop.Entity\obj\Debug\net8.0\EShop.Entity.csproj.AssemblyReference.cache
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\16-02-2025\EShop\Backend\EShop.Entity\obj\Debug\net8.0\EShop.Entity.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\16-02-2025\EShop\Backend\EShop.Entity\obj\Debug\net8.0\EShop.Entity.AssemblyInfoInputs.cache
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\16-02-2025\EShop\Backend\EShop.Entity\obj\Debug\net8.0\EShop.Entity.AssemblyInfo.cs
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\16-02-2025\EShop\Backend\EShop.Entity\obj\Debug\net8.0\EShop.Entity.csproj.CoreCompileInputs.cache
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\16-02-2025\EShop\Backend\EShop.Entity\obj\Debug\net8.0\EShop.Entity.sourcelink.json
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\16-02-2025\EShop\Backend\EShop.Entity\obj\Debug\net8.0\EShop.En.2F1A13A4.Up2Date
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\16-02-2025\EShop\Backend\EShop.Entity\obj\Debug\net8.0\EShop.Entity.dll
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\16-02-2025\EShop\Backend\EShop.Entity\obj\Debug\net8.0\refint\EShop.Entity.dll
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\16-02-2025\EShop\Backend\EShop.Entity\obj\Debug\net8.0\EShop.Entity.pdb
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week11\16-02-2025\EShop\Backend\EShop.Entity\obj\Debug\net8.0\ref\EShop.Entity.dll
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week12\22-02-2025\EShop\Backend\EShop.Entity\bin\Debug\net8.0\EShop.Entity.deps.json
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week12\22-02-2025\EShop\Backend\EShop.Entity\bin\Debug\net8.0\EShop.Entity.dll
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week12\22-02-2025\EShop\Backend\EShop.Entity\bin\Debug\net8.0\EShop.Entity.pdb
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week12\22-02-2025\EShop\Backend\EShop.Entity\bin\Debug\net8.0\EShop.Shared.dll
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week12\22-02-2025\EShop\Backend\EShop.Entity\bin\Debug\net8.0\EShop.Shared.pdb
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week12\22-02-2025\EShop\Backend\EShop.Entity\obj\Debug\net8.0\EShop.Entity.csproj.AssemblyReference.cache
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week12\22-02-2025\EShop\Backend\EShop.Entity\obj\Debug\net8.0\EShop.Entity.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week12\22-02-2025\EShop\Backend\EShop.Entity\obj\Debug\net8.0\EShop.Entity.AssemblyInfoInputs.cache
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week12\22-02-2025\EShop\Backend\EShop.Entity\obj\Debug\net8.0\EShop.Entity.AssemblyInfo.cs
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week12\22-02-2025\EShop\Backend\EShop.Entity\obj\Debug\net8.0\EShop.Entity.csproj.CoreCompileInputs.cache
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week12\22-02-2025\EShop\Backend\EShop.Entity\obj\Debug\net8.0\EShop.Entity.sourcelink.json
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week12\22-02-2025\EShop\Backend\EShop.Entity\obj\Debug\net8.0\EShop.En.2F1A13A4.Up2Date
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week12\22-02-2025\EShop\Backend\EShop.Entity\obj\Debug\net8.0\EShop.Entity.dll
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week12\22-02-2025\EShop\Backend\EShop.Entity\obj\Debug\net8.0\refint\EShop.Entity.dll
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week12\22-02-2025\EShop\Backend\EShop.Entity\obj\Debug\net8.0\EShop.Entity.pdb
+D:\GitHubb\BackendMasteryBootcamp\İleri Seviye MVC\Week12\22-02-2025\EShop\Backend\EShop.Entity\obj\Debug\net8.0\ref\EShop.Entity.dll

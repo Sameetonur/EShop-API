@@ -50,7 +50,7 @@ public class ProductManager : IProductService
             {
                 return ResponseDto<ProductDto>.Fail("Ürün resmi boş olamaz.", StatusCodes.Status400BadRequest);
             }
-            var imageResponse = await _imageService.UploadImageAsync(productCreateDto.Image);
+            var imageResponse = await _imageService.UploadImageAsync(productCreateDto.Image, "products");
             if (!imageResponse.IsSuccessful && imageResponse.Error != null)
             {
                 return ResponseDto<ProductDto>.Fail(imageResponse.Error, imageResponse.StatusCode);
@@ -274,11 +274,7 @@ public class ProductManager : IProductService
             {
                 return ResponseDto<NoContent>.Fail("Silme işlemi sırasında bir sorun oluştu!", StatusCodes.Status500InternalServerError);
             }
-            var deleteResponse = _imageService.DeleteImage(product.ImageUrl!);
-            if (!deleteResponse.IsSuccessful)
-            {
-                return ResponseDto<NoContent>.Fail("Resim silinirken bir sorun oluştu!", StatusCodes.Status500InternalServerError);
-            }
+            _imageService.DeleteImage(product.ImageUrl!);
             return ResponseDto<NoContent>.Success(StatusCodes.Status204NoContent);
         }
         catch (Exception ex)
@@ -337,21 +333,17 @@ public class ProductManager : IProductService
                     return ResponseDto<NoContent>.Fail($"{categoryId} id'li kategori bulunamadı veya pasif/silinmiş.", StatusCodes.Status404NotFound);
                 }
             }
+            var newImageUrl=string.Empty;
             if (productUpdateDto.Image != null)
             {
 
-                var imageResponse = await _imageService.UploadImageAsync(productUpdateDto.Image);
+                var imageResponse = await _imageService.UploadImageAsync(productUpdateDto.Image ,"products");
                 if (!imageResponse.IsSuccessful && imageResponse.Error != null)
                 {
                     return ResponseDto<NoContent>.Fail(imageResponse.Error, imageResponse.StatusCode);
                 }
-                //Şimdi ürünün eski resmini sileceğiz
-                var deleteResponse = _imageService.DeleteImage(product.ImageUrl!);
-                if (!deleteResponse.IsSuccessful)
-                {
-                    return ResponseDto<NoContent>.Fail("Resim silinirken bir sorun oluştu!", StatusCodes.Status500InternalServerError);
-                }
-                product.ImageUrl = imageResponse.Data;
+                
+                product.ImageUrl = newImageUrl = imageResponse.Data;
             }
             _mapper.Map(productUpdateDto, product);
 
@@ -364,8 +356,10 @@ public class ProductManager : IProductService
             var result = await _unitOfWork.SaveAsync();
             if (result < 1)
             {
+                _imageService.DeleteImage(newImageUrl!);
                 return ResponseDto<NoContent>.Fail("Ürün güncellenirken bir hata oluştu.", StatusCodes.Status500InternalServerError);
             }
+            _imageService.DeleteImage(product.ImageUrl!);
             return ResponseDto<NoContent>.Success(StatusCodes.Status204NoContent);
         }
         catch (Exception ex)
@@ -396,5 +390,24 @@ public class ProductManager : IProductService
         {
             return ResponseDto<bool>.Fail(ex.Message, StatusCodes.Status500InternalServerError);
         }
+    }
+
+    public async Task<ResponseDto<NoContent>> UpdateIsActiveByCategoryAsync(int categoryId)
+    {
+        var products = await _productRepository.GetAllAsync(
+
+            x=>x.ProductCategories.Any(y=>y.CategoryId==categoryId)
+        );
+        foreach(var product in products)
+        {
+            product.IsActive=!product.IsActive;
+        }
+         _productRepository.BatchUpdate(products);
+         var result = await _unitOfWork.SaveAsync();
+         if(result > 1)
+         {
+            return ResponseDto<NoContent>.Fail("Ürünler güncellenirken bir hata oluştu.",StatusCodes.Status500InternalServerError);
+         }
+         return ResponseDto<NoContent>.Success(StatusCodes.Status204NoContent);
     }
 }

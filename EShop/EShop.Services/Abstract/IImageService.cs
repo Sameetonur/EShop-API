@@ -6,6 +6,6 @@ namespace EShop.Services.Abstract;
 
 public interface IImageService
 {
-    Task<ResponseDto<string>> UploadImageAsync(IFormFile image);
-    ResponseDto<NoContent> DeleteImage(string imageUrl);
+    Task<ResponseDto<string>> UploadImageAsync(IFormFile image,string folderName);
+    void DeleteImage(string imageUrl);
 }
